@@ -238,7 +238,8 @@ def showDownloads(label, urls):
 
     for type in urls:
         if len(urls[type]) != 0:
-            print(type + ": ", end='')
+            # print(type + ": ", end='')
+            print(type + ": ")
             for url in urls[type]:
                 print("-- " + url)
 
@@ -309,7 +310,7 @@ def getDownloadableURLs(course_id, week_id, step_id, week_num, content, DOWNLOAD
             pos += len(SRC_MATCH)
             debug(4, "source src ==> <<{}...>>".format(content[pos:pos+400]))
         else:
-            debug(4, "HREF ==> <<{}...>>".format(content[pos:pos+400]))
+            # debug(4, "HREF ==> <<{}...>>".format(content[pos:pos+400]))
             pos += len(POS_MATCH)
 
         quote = content[pos]
